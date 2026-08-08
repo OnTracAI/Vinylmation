@@ -1,0 +1,255 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ground: #0c0c0e;
+  --color-ground-2: #121215;
+  --color-surface: #17171b;
+  --color-surface-2: #1e1e23;
+  --color-hairline: #2a2a31;
+  --color-hairline-bright: #3a3a44;
+
+  /* Backing for figure photos: the archived shots are on white, so thumbnails
+     sit on a warm off-white plate instead of glaring against the dark UI. */
+  --color-plate: #f2efe9;
+
+  --color-ink: #f4f1ec;
+  --color-ink-dim: #a7a39c;
+  --color-ink-faint: #6e6a64;
+
+  /* Carried over from the original site's pink. */
+  --color-accent: #ff2d78;
+  --color-accent-dim: #b81f56;
+
+  /* Rarity coding — the thing collectors scan a grid for. */
+  --color-common: #7e7a73;
+  --color-variant: #45d6c4;
+  --color-chaser: #ffd23f;
+  --color-topper: #a78bfa;
+
+  --font-display: var(--font-bricolage), ui-sans-serif, sans-serif;
+  --font-body: var(--font-instrument), ui-sans-serif, sans-serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, monospace;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-hairline);
+  }
+
+  html {
+    background: var(--color-ground);
+    color-scheme: dark;
+  }
+
+  body {
+    background: var(--color-ground);
+    color: var(--color-ink);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Atmosphere: a faint magenta bloom at the top, plus film grain over
+     everything so large flat dark areas don't read as dead space. */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    background:
+      radial-gradient(60rem 30rem at 50% -12rem, rgba(255, 45, 120, 0.09), transparent 70%),
+      radial-gradient(40rem 24rem at 90% 10%, rgba(69, 214, 196, 0.045), transparent 70%);
+  }
+
+  body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.028;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  ::selection {
+    background: var(--color-accent);
+    color: #fff;
+  }
+
+  /* Slim, dark scrollbars — a 3500-row catalog scrolls a lot. */
+  ::-webkit-scrollbar {
+    width: 11px;
+    height: 11px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--color-ground);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-hairline-bright);
+    border: 3px solid var(--color-ground);
+    border-radius: 99px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-ink-faint);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  /* The uppercase tracked micro-label used throughout, echoing the original
+     site's `key // value` metadata rows. */
+  .label {
+    font-family: var(--font-mono);
+    font-size: 0.625rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--color-ink-faint);
+  }
+
+  .label-bright {
+    font-family: var(--font-mono);
+    font-size: 0.625rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--color-ink-dim);
+  }
+
+  /* `//` separator, as on the source site. */
+  .sep::after {
+    content: "//";
+    color: var(--color-hairline-bright);
+    margin: 0 0.5rem;
+    font-family: var(--font-mono);
+  }
+
+  .rule {
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      var(--color-hairline-bright),
+      var(--color-hairline) 40%,
+      transparent
+    );
+  }
+
+  /* Specimen cell: the catalog grid unit. */
+  .cell {
+    position: relative;
+    background: var(--color-surface);
+    border: 1px solid var(--color-hairline);
+    transition:
+      border-color 160ms ease,
+      background-color 160ms ease,
+      transform 160ms ease;
+  }
+  .cell:hover {
+    background: var(--color-surface-2);
+    border-color: var(--color-hairline-bright);
+    transform: translateY(-2px);
+  }
+
+  .btn {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 0.5rem 0.875rem;
+    border: 1px solid var(--color-hairline-bright);
+    background: var(--color-surface);
+    color: var(--color-ink-dim);
+    transition: all 140ms ease;
+    cursor: pointer;
+  }
+  .btn:hover:not(:disabled) {
+    color: var(--color-ink);
+    border-color: var(--color-ink-faint);
+    background: var(--color-surface-2);
+  }
+  .btn:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+  }
+
+  .btn-accent {
+    background: var(--color-accent);
+    border-color: var(--color-accent);
+    color: #fff;
+  }
+  .btn-accent:hover:not(:disabled) {
+    background: #ff4a8b;
+    border-color: #ff4a8b;
+    color: #fff;
+  }
+
+  .btn-on {
+    background: color-mix(in srgb, var(--color-accent) 16%, transparent);
+    border-color: var(--color-accent-dim);
+    color: var(--color-accent);
+  }
+
+  .input {
+    background: var(--color-ground-2);
+    border: 1px solid var(--color-hairline);
+    color: var(--color-ink);
+    padding: 0.625rem 0.75rem;
+    font-family: var(--font-body);
+    width: 100%;
+    transition: border-color 140ms ease;
+  }
+  .input::placeholder {
+    color: var(--color-ink-faint);
+  }
+  .input:focus {
+    border-color: var(--color-accent-dim);
+    outline: none;
+  }
+
+  select.input {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    padding: 0.5rem 0.625rem;
+    appearance: none;
+    background-image: linear-gradient(45deg, transparent 50%, var(--color-ink-faint) 50%),
+      linear-gradient(135deg, var(--color-ink-faint) 50%, transparent 50%);
+    background-position:
+      calc(100% - 14px) center,
+      calc(100% - 9px) center;
+    background-size:
+      5px 5px,
+      5px 5px;
+    background-repeat: no-repeat;
+    padding-right: 1.75rem;
+  }
+}
+
+@layer utilities {
+  /* Staggered grid reveal — one orchestrated load beats scattered fidgeting. */
+  @keyframes rise {
+    from {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  .rise {
+    animation: rise 380ms cubic-bezier(0.2, 0.7, 0.3, 1) both;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .rise,
+    .cell {
+      animation: none !important;
+      transition: none !important;
+      transform: none !important;
+    }
+  }
+}
