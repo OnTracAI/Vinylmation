@@ -1,0 +1,29 @@
+{
+  "node": {
+    "6016fbc4f591e55cd40250d3f6754b475da38fa675": {
+      "workers": {
+        "app/signup/page": {
+          "moduleId": "[project]/.next-internal/server/app/signup/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/_actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "signIn",
+          "filename": "app/_actions/auth.ts"
+        }
+      },
+      "exportedName": "signIn",
+      "filename": "app/_actions/auth.ts"
+    },
+    "60fb16b0d083d93c4b6e383490437f0fb9304d6457": {
+      "workers": {
+        "app/signup/page": {
+          "moduleId": "[project]/.next-internal/server/app/signup/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/_actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "signUp",
+          "filename": "app/_actions/auth.ts"
+        }
+      },
+      "exportedName": "signUp",
+      "filename": "app/_actions/auth.ts"
+    }
+  },
+  "edge": {}
+}

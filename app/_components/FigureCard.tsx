@@ -3,6 +3,7 @@ import type { FigureRow } from "@/lib/queries";
 import { OwnershipButtons } from "./OwnershipButtons";
 import { RarityTag, rarityColor } from "./RarityTag";
 import { THUMB_BOX, thumbStyle } from "./thumb";
+import { VinylSilhouette } from "./VinylSilhouette";
 
 /**
  * One cell in the specimen grid. Ownership is shown two ways — a coloured left
@@ -106,7 +107,7 @@ function FigureThumb({ figure }: { figure: FigureRow }) {
         aria-label={figure.name}
         className="relative overflow-hidden transition-transform duration-300
           group-hover:scale-[1.03]"
-        style={thumbStyle(figure.imagePath)}
+        style={thumbStyle(figure.imagePath, figure.imageAspect)}
       />
     );
   }
@@ -121,26 +122,3 @@ function FigureThumb({ figure }: { figure: FigureRow }) {
   );
 }
 
-/** The Vinylmation body shape: mouse-ear head over a rounded torso. */
-function VinylSilhouette({ color }: { color: string }) {
-  return (
-    <svg
-      viewBox="0 0 100 100"
-      className="size-[62%] transition-transform duration-500 group-hover:scale-105"
-      aria-hidden
-    >
-      <g fill={color} opacity="0.17">
-        <circle cx="27" cy="26" r="14" />
-        <circle cx="73" cy="26" r="14" />
-        <circle cx="50" cy="42" r="23" />
-        <path d="M31 60h38a8 8 0 0 1 8 8v18a8 8 0 0 1-8 8H31a8 8 0 0 1-8-8V68a8 8 0 0 1 8-8Z" />
-      </g>
-      <g fill="none" stroke={color} strokeWidth="1.5" opacity="0.5">
-        <circle cx="27" cy="26" r="14" />
-        <circle cx="73" cy="26" r="14" />
-        <circle cx="50" cy="42" r="23" />
-        <path d="M31 60h38a8 8 0 0 1 8 8v18a8 8 0 0 1-8 8H31a8 8 0 0 1-8-8V68a8 8 0 0 1 8-8Z" />
-      </g>
-    </svg>
-  );
-}

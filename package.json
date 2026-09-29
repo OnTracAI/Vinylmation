@@ -29,6 +29,7 @@
     "@types/node": "^26.1.2",
     "@types/react": "^19.2.18",
     "drizzle-kit": "^0.31.10",
+    "image-size": "^2.0.2",
     "postcss": "^8.5.25",
     "tailwindcss": "^4.3.3",
     "typescript": "^7.0.2"

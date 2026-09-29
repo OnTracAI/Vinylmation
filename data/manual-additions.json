@@ -1,0 +1,60 @@
+{
+  "_comment": [
+    "Hand-curated series that aren't in the Internet Archive scrape — mostly",
+    "releases after the source site stopped updating in 2018.",
+    "",
+    "seed.mjs merges these with the scraped data, so they survive re-imports.",
+    "Anything added straight into the database instead would be retired on the",
+    "next seed.",
+    "",
+    "Shape matches a series entry in series.json. Leave a field null rather than",
+    "guessing — nulls render as '—' and set detail_complete = 0, which the UI",
+    "explains. A wrong value looks authoritative and is worse than a gap.",
+    "",
+    "sourceId uses a 'manual:' prefix so ids stay stable across re-imports",
+    "(that's what user collection rows hang off) and never collide with the",
+    "source catalogue's own record ids."
+  ],
+  "series": [
+    {
+      "slug": "walt-disney-world-50th-anniversary-series-1",
+      "name": "Walt Disney World 50th Anniversary Series 1",
+      "expectedCount": 12,
+      "sourceNote": "Figure names and set size from coleka.com listing r30405, which titles it 'Walt Disney World 50th series 1'. Renamed for consistency with Series 2.",
+      "figures": [
+        { "sourceId": "manual:wdw50-s1:big-al", "slug": "big-al", "name": "Big Al" },
+        { "sourceId": "manual:wdw50-s1:chip", "slug": "chip", "name": "Chip" },
+        { "sourceId": "manual:wdw50-s1:daisy-duck", "slug": "daisy-duck", "name": "Daisy Duck" },
+        { "sourceId": "manual:wdw50-s1:dale", "slug": "dale", "name": "Dale" },
+        { "sourceId": "manual:wdw50-s1:donald-duck", "slug": "donald-duck", "name": "Donald Duck" },
+        { "sourceId": "manual:wdw50-s1:dumbo", "slug": "dumbo", "name": "Dumbo" },
+        { "sourceId": "manual:wdw50-s1:goofy", "slug": "goofy", "name": "Goofy" },
+        { "sourceId": "manual:wdw50-s1:mickey-mouse", "slug": "mickey-mouse", "name": "Mickey Mouse" },
+        { "sourceId": "manual:wdw50-s1:minnie-mouse", "slug": "minnie-mouse", "name": "Minnie Mouse" },
+        { "sourceId": "manual:wdw50-s1:mr-toad", "slug": "mr-toad", "name": "Mr. Toad", "type": "chaser" },
+        { "sourceId": "manual:wdw50-s1:pluto", "slug": "pluto", "name": "Pluto" },
+        { "sourceId": "manual:wdw50-s1:skeleton-helmsmen", "slug": "skeleton-helmsmen", "name": "Skeleton Helmsmen" }
+      ]
+    },
+    {
+      "slug": "walt-disney-world-50th-anniversary-series-2",
+      "name": "Walt Disney World 50th Anniversary Series 2",
+      "expectedCount": 12,
+      "sourceNote": "Figure names and set size from coleka.com listing r30869.",
+      "figures": [
+        { "sourceId": "manual:wdw50-s2:alice", "slug": "alice", "name": "Alice" },
+        { "sourceId": "manual:wdw50-s2:figment", "slug": "figment", "name": "Figment", "type": "chaser" },
+        { "sourceId": "manual:wdw50-s2:madame-leota", "slug": "madame-leota", "name": "Madame Leota" },
+        { "sourceId": "manual:wdw50-s2:orange-bird", "slug": "orange-bird", "name": "Orange Bird" },
+        { "sourceId": "manual:wdw50-s2:rafiki", "slug": "rafiki", "name": "Rafiki" },
+        { "sourceId": "manual:wdw50-s2:ray", "slug": "ray", "name": "Ray" },
+        { "sourceId": "manual:wdw50-s2:remy", "slug": "remy", "name": "Remy" },
+        { "sourceId": "manual:wdw50-s2:tinker-bell", "slug": "tinker-bell", "name": "Tinker Bell" },
+        { "sourceId": "manual:wdw50-s2:vanellope", "slug": "vanellope", "name": "Vanellope" },
+        { "sourceId": "manual:wdw50-s2:woody", "slug": "woody", "name": "Woody" },
+        { "sourceId": "manual:wdw50-s2:wreck-it-ralph", "slug": "wreck-it-ralph", "name": "Wreck-it-Ralph" },
+        { "sourceId": "manual:wdw50-s2:zazu", "slug": "zazu", "name": "Zazu" }
+      ]
+    }
+  ]
+}

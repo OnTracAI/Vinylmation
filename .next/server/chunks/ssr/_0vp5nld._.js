@@ -1,0 +1,4 @@
+module.exports=[37936,(a,b,c)=>{"use strict";Object.defineProperty(c,"__esModule",{value:!0}),Object.defineProperty(c,"registerServerReference",{enumerable:!0,get:function(){return d.registerServerReference}});let d=a.r(11857)},13095,(a,b,c)=>{"use strict";function d(a){for(let b=0;b<a.length;b++){let c=a[b];if("function"!=typeof c)throw Object.defineProperty(Error(`A "use server" file can only export async functions, found ${typeof c}.
+Read more: https://nextjs.org/docs/messages/invalid-use-server-value`),"__NEXT_ERROR_CODE",{value:"E352",enumerable:!1,configurable:!0})}}Object.defineProperty(c,"__esModule",{value:!0}),Object.defineProperty(c,"ensureServerEntryExports",{enumerable:!0,get:function(){return d}})},12869,a=>{"use strict";var b=a.i(63920);a.s([],93835),a.i(93835),a.s(["401f0b8a20fd82ac3663b2a17638903f82ecb052db",()=>b.toggleOwned,"403dda396e34a778a69bbdb3e4310baf900fce457e",()=>b.toggleWishlist],12869)}];
+
+//# sourceMappingURL=_0vp5nld._.js.map

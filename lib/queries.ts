@@ -34,6 +34,7 @@ export type FigureRow = {
   setTotal: number | null;
   imageUrl: string | null;
   imagePath: string | null;
+  imageAspect: number | null;
   detailComplete: boolean;
   seriesId: number;
   seriesName: string;
@@ -60,6 +61,7 @@ const FIGURE_COLUMNS = {
   setTotal: figures.setTotal,
   imageUrl: figures.imageUrl,
   imagePath: figures.imagePath,
+  imageAspect: figures.imageAspect,
   detailComplete: figures.detailComplete,
   seriesId: figures.seriesId,
   seriesName: series.name,
@@ -111,10 +113,12 @@ export function listSeriesGroups() {
  * One windowed query rather than a lookup per card — the index renders all 319
  * groups at once, so per-card queries would mean 319 round trips.
  */
-export function getSeriesThumbnails(perSeries = 3): Map<string, string[]> {
-  const rows = db.all<{ baseName: string; imagePath: string }>(sql`
-    SELECT base_name AS baseName, image_path AS imagePath FROM (
-      SELECT s.base_name, f.image_path,
+export type SeriesThumb = { path: string; aspect: number | null };
+
+export function getSeriesThumbnails(perSeries = 3): Map<string, SeriesThumb[]> {
+  const rows = db.all<{ baseName: string; imagePath: string; imageAspect: number | null }>(sql`
+    SELECT base_name AS baseName, image_path AS imagePath, image_aspect AS imageAspect FROM (
+      SELECT s.base_name, f.image_path, f.image_aspect,
              ROW_NUMBER() OVER (
                PARTITION BY s.base_name
                ORDER BY f.set_position IS NULL, f.set_position, f.name
@@ -126,11 +130,12 @@ export function getSeriesThumbnails(perSeries = 3): Map<string, string[]> {
     WHERE rn <= ${perSeries}
   `);
 
-  const map = new Map<string, string[]>();
+  const map = new Map<string, SeriesThumb[]>();
   for (const r of rows) {
+    const thumb = { path: r.imagePath, aspect: r.imageAspect };
     const list = map.get(r.baseName);
-    if (list) list.push(r.imagePath);
-    else map.set(r.baseName, [r.imagePath]);
+    if (list) list.push(thumb);
+    else map.set(r.baseName, [thumb]);
   }
   return map;
 }

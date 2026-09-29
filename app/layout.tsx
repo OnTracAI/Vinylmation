@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Bricolage_Grotesque, Instrument_Sans, JetBrains_Mono } from "next/font/google";
 import Link from "next/link";
 import { currentUser } from "@/lib/auth";
+import { BackToTop } from "./_components/BackToTop";
 import { SearchBar } from "./_components/SearchBar";
 import "./globals.css";
 
@@ -34,7 +35,13 @@ export default async function RootLayout({ children }: { children: React.ReactNo
     <html lang="en" className={`${bricolage.variable} ${instrument.variable} ${jetbrains.variable}`}>
       <body>
         <div className="relative z-10 flex min-h-screen flex-col">
-          <header className="sticky top-0 z-50 border-b border-hairline bg-ground/85 backdrop-blur-xl">
+          {/* Focus target for the back-to-top control. */}
+          <header
+            id="top"
+            tabIndex={-1}
+            className="sticky top-0 z-50 border-b border-hairline bg-ground/85 backdrop-blur-xl
+              outline-none"
+          >
             <div className="mx-auto flex max-w-[1600px] items-center gap-4 px-4 py-3 sm:px-6">
               <Link href="/" className="group flex shrink-0 items-baseline gap-2">
                 <span
@@ -78,6 +85,8 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           </header>
 
           <main className="flex-1">{children}</main>
+
+          <BackToTop />
 
           <footer className="mt-20 border-t border-hairline">
             <div

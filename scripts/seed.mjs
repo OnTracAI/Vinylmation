@@ -14,6 +14,7 @@ import path from "node:path";
 
 const DATA = path.join(process.cwd(), "data", "figures.json");
 const SERIES_DATA = path.join(process.cwd(), "data", "series.json");
+const MANUAL_DATA = path.join(process.cwd(), "data", "manual-additions.json");
 const DB_PATH = process.env.DATABASE_PATH ?? path.join(process.cwd(), "data", "vinylmation.db");
 
 const SCHEMA = `
@@ -48,6 +49,7 @@ CREATE TABLE IF NOT EXISTS figures (
   set_total INTEGER,
   image_url TEXT,
   image_path TEXT,
+  image_aspect REAL,
   detail_complete INTEGER NOT NULL DEFAULT 0,
   UNIQUE(series_id, slug)
 );
@@ -196,6 +198,28 @@ function main() {
   const figures = JSON.parse(fs.readFileSync(DATA, "utf8"));
   const seriesRaw = JSON.parse(fs.readFileSync(SERIES_DATA, "utf8"));
 
+  // Hand-curated series (releases the 2018 archive never covered) are merged in
+  // here rather than inserted straight into the database — the retirement pass
+  // below deletes anything absent from this import, so a direct insert would
+  // disappear on the next seed.
+  let manualSeries = 0;
+  let manualFigures = 0;
+  if (fs.existsSync(MANUAL_DATA)) {
+    const manual = JSON.parse(fs.readFileSync(MANUAL_DATA, "utf8"));
+    for (const entry of manual.series ?? []) {
+      if (seriesRaw.some((s) => s.slug === entry.slug)) {
+        console.warn(`  ! manual series "${entry.slug}" also exists in the scrape — skipping`);
+        continue;
+      }
+      seriesRaw.push({ slug: entry.slug, name: entry.name, expectedCount: entry.expectedCount });
+      for (const f of entry.figures ?? []) {
+        figures.push({ ...f, seriesSlug: entry.slug, seriesName: entry.name });
+        manualFigures++;
+      }
+      manualSeries++;
+    }
+  }
+
   fs.mkdirSync(path.dirname(DB_PATH), { recursive: true });
   const db = new Database(DB_PATH);
   db.pragma("journal_mode = WAL");
@@ -254,6 +278,7 @@ function main() {
        set_total = excluded.set_total,
        image_url = COALESCE(excluded.image_url, figures.image_url),
        image_path = COALESCE(excluded.image_path, figures.image_path),
+       image_aspect = COALESCE(excluded.image_aspect, figures.image_aspect),
        detail_complete = excluded.detail_complete`;
 
   const insertFigure = db.prepare(
@@ -393,6 +418,9 @@ function main() {
   console.log(`  chasers:          ${stats.chasers}`);
   console.log(`  distinct artists: ${stats.artists}`);
   if (skipped) console.log(`  duplicate rows skipped: ${skipped}`);
+  if (manualSeries) {
+    console.log(`  manual additions:  ${manualSeries} series, ${manualFigures} figures`);
+  }
   if (removed) console.log(`  retired figures no longer in source: ${removed}`);
   if (retained.length) {
     console.log(

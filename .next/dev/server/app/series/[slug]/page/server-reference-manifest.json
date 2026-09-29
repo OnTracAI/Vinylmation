@@ -1,0 +1,53 @@
+{
+  "node": {
+    "4088b0019b0acd0e2c1b4ab4e8233ad5dfa90bda8b": {
+      "workers": {
+        "app/series/[slug]/page": {
+          "moduleId": "[project]/.next-internal/server/app/series/[slug]/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/_actions/collection.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "ownEntireSeries",
+          "filename": "app/_actions/collection.ts"
+        }
+      },
+      "exportedName": "ownEntireSeries",
+      "filename": "app/_actions/collection.ts"
+    },
+    "406402e5dbf0a3fc0a8e2046563a472312c8bb4820": {
+      "workers": {
+        "app/series/[slug]/page": {
+          "moduleId": "[project]/.next-internal/server/app/series/[slug]/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/_actions/collection.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "wantEntireSeries",
+          "filename": "app/_actions/collection.ts"
+        }
+      },
+      "exportedName": "wantEntireSeries",
+      "filename": "app/_actions/collection.ts"
+    },
+    "4095c879e987d867c575e967211447d854656d73a0": {
+      "workers": {
+        "app/series/[slug]/page": {
+          "moduleId": "[project]/.next-internal/server/app/series/[slug]/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/_actions/collection.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "toggleOwned",
+          "filename": "app/_actions/collection.ts"
+        }
+      },
+      "exportedName": "toggleOwned",
+      "filename": "app/_actions/collection.ts"
+    },
+    "401ec01aba2726aa4b162f14d0e3246571ce45cf17": {
+      "workers": {
+        "app/series/[slug]/page": {
+          "moduleId": "[project]/.next-internal/server/app/series/[slug]/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/_actions/collection.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "toggleWishlist",
+          "filename": "app/_actions/collection.ts"
+        }
+      },
+      "exportedName": "toggleWishlist",
+      "filename": "app/_actions/collection.ts"
+    }
+  },
+  "edge": {}
+}

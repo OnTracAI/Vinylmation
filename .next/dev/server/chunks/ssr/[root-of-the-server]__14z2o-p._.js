@@ -569,6 +569,11 @@ async function RootLayout({ children }) {
                         lineNumber: 80,
                         columnNumber: 11
                     }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(BackToTop, {}, void 0, false, {
+                        fileName: "[project]/app/layout.tsx",
+                        lineNumber: 82,
+                        columnNumber: 11
+                    }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("footer", {
                         className: "mt-20 border-t border-hairline",
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -583,14 +588,14 @@ async function RootLayout({ children }) {
                                             children: "//"
                                         }, void 0, false, {
                                             fileName: "[project]/app/layout.tsx",
-                                            lineNumber: 88,
+                                            lineNumber: 90,
                                             columnNumber: 35
                                         }, this),
                                         " personal collection tracker"
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/layout.tsx",
-                                    lineNumber: 87,
+                                    lineNumber: 89,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -598,18 +603,18 @@ async function RootLayout({ children }) {
                                     children: "Vinylmation is a trademark of Disney. This is an unaffiliated fan project."
                                 }, void 0, false, {
                                     fileName: "[project]/app/layout.tsx",
-                                    lineNumber: 91,
+                                    lineNumber: 93,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/layout.tsx",
-                            lineNumber: 83,
+                            lineNumber: 85,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/app/layout.tsx",
-                        lineNumber: 82,
+                        lineNumber: 84,
                         columnNumber: 11
                     }, this)
                 ]
@@ -636,7 +641,7 @@ function NavLink({ href, children }) {
         children: children
     }, void 0, false, {
         fileName: "[project]/app/layout.tsx",
-        lineNumber: 104,
+        lineNumber: 106,
         columnNumber: 5
     }, this);
 }

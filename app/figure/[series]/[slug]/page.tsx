@@ -10,6 +10,7 @@ import {
 import { OwnedDetailsForm } from "@/app/_components/OwnedDetailsForm";
 import { OwnershipButtons } from "@/app/_components/OwnershipButtons";
 import { RarityTag, rarityColor } from "@/app/_components/RarityTag";
+import { VinylSilhouette } from "@/app/_components/VinylSilhouette";
 
 export default async function FigurePage({
   params,
@@ -94,7 +95,7 @@ export default async function FigurePage({
               />
             ) : (
               <div className="flex flex-col items-center gap-3">
-                <BigSilhouette color={rarityColor(figure.type)} />
+                <VinylSilhouette color={rarityColor(figure.type)} scale="10rem" animate={false} />
                 <span className="label">no image on file</span>
               </div>
             )}
@@ -223,21 +224,3 @@ function formatDate(iso: string | null) {
   });
 }
 
-function BigSilhouette({ color }: { color: string }) {
-  return (
-    <svg viewBox="0 0 100 100" className="size-40" aria-hidden>
-      <g fill={color} opacity="0.14">
-        <circle cx="27" cy="26" r="14" />
-        <circle cx="73" cy="26" r="14" />
-        <circle cx="50" cy="42" r="23" />
-        <path d="M31 60h38a8 8 0 0 1 8 8v18a8 8 0 0 1-8 8H31a8 8 0 0 1-8-8V68a8 8 0 0 1 8-8Z" />
-      </g>
-      <g fill="none" stroke={color} strokeWidth="1.2" opacity="0.45">
-        <circle cx="27" cy="26" r="14" />
-        <circle cx="73" cy="26" r="14" />
-        <circle cx="50" cy="42" r="23" />
-        <path d="M31 60h38a8 8 0 0 1 8 8v18a8 8 0 0 1-8 8H31a8 8 0 0 1-8-8V68a8 8 0 0 1 8-8Z" />
-      </g>
-    </svg>
-  );
-}

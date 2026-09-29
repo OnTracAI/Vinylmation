@@ -1,38 +1,59 @@
 /**
- * Shared crop for archived figure photos.
+ * Thumbnail framing for figure photos.
  *
- * The source images are 729x400 composites on white, and their layouts vary —
- * some are figure + packaging + artist signature, others are four rotated
- * views of the figure alone. Shown whole at thumbnail size the figure is
- * unrecognisably small.
+ * The photos come from two unrelated sources with opposite shapes, so there is
+ * no single crop that suits both:
  *
- * The one constant across layouts is a front view of the figure at the left
- * edge, so thumbnails zoom to roughly the left quarter, bottom-weighted to
- * skip the logo band. Cropping lives here (CSS) rather than in the download,
- * so re-cropping never means re-fetching ~314 MB.
+ *  - Archived catalogue shots are ~729x400 landscape composites — several views
+ *    of the figure, often with packaging and the artist's signature, on white.
+ *    Shown whole at thumbnail size the figure is unrecognisably small, so these
+ *    zoom to the front view at the left edge.
+ *
+ *  - Hand-added photos are typically portrait single-figure shots (~220x310).
+ *    Zooming those magnifies a fragment and throws the figure off-centre; they
+ *    just need to be fitted whole and centred.
+ *
+ * link-images.mjs records each image's aspect ratio, so the choice is made from
+ * the actual file rather than assumed. Framing stays in CSS so re-tuning never
+ * means re-fetching ~300 MB of photos.
  */
-export const THUMB_CROP = {
-  backgroundSize: "385% auto",
-  backgroundPosition: "2% 88%",
+
+/** Above this, an image is a multi-view composite rather than a single figure. */
+const COMPOSITE_ASPECT = 1.2;
+
+const BOX = {
+  aspectRatio: "3 / 4",
+  backgroundColor: "var(--color-plate, #f2efe9)",
   backgroundRepeat: "no-repeat",
 } as const;
 
-/**
- * Aspect ratio and plate colour are set inline rather than left to utility
- * classes alone. A thumbnail is a background image on an otherwise empty div,
- * so its height comes entirely from the aspect ratio — if that one rule is
- * missing the box collapses to zero height and the photo silently vanishes
- * while the rest of the page looks perfectly fine. Inlining it means the
- * thumbnails can't be broken by a stale stylesheet or a purged utility.
- */
-export const THUMB_BOX = {
-  aspectRatio: "3 / 4",
-  backgroundColor: "var(--color-plate, #f2efe9)",
+/** Zoom to the front view at the left edge of a wide composite. */
+const COMPOSITE_CROP = {
+  backgroundSize: "385% auto",
+  backgroundPosition: "2% 88%",
 } as const;
 
-/** Inline style for an element whose background is a cropped figure photo. */
-export function thumbStyle(imagePath: string): React.CSSProperties {
-  return { backgroundImage: `url("${imagePath}")`, ...THUMB_CROP, ...THUMB_BOX };
+/** Fit a single-figure shot whole, centred, with a little breathing room. */
+const SINGLE_FIT = {
+  backgroundSize: "contain",
+  backgroundPosition: "center center",
+} as const;
+
+/** Aspect ratio and plate colour, for the no-photo fallback. */
+export const THUMB_BOX = BOX;
+
+/**
+ * Inline style for an element whose background is a figure photo.
+ *
+ * `aspect` is the image's own width/height. A null value (older rows, or a file
+ * whose dimensions couldn't be read) falls back to fitting the whole image —
+ * the safe choice, since it can't crop the subject out of frame.
+ */
+export function thumbStyle(imagePath: string, aspect?: number | null): React.CSSProperties {
+  const framing =
+    aspect != null && aspect > COMPOSITE_ASPECT ? COMPOSITE_CROP : SINGLE_FIT;
+
+  return { backgroundImage: `url("${imagePath}")`, ...BOX, ...framing };
 }
 
 /** Inline style for an empty thumbnail slot — keeps the row's height. */

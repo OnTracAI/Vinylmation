@@ -1,6 +1,11 @@
 import Link from "next/link";
 import { currentUser } from "@/lib/auth";
-import { getSeriesProgress, getSeriesThumbnails, listSeriesGroups } from "@/lib/queries";
+import {
+  getSeriesProgress,
+  getSeriesThumbnails,
+  listSeriesGroups,
+  type SeriesThumb,
+} from "@/lib/queries";
 import { ScrollMemory } from "../_components/ScrollMemory";
 import { emptyThumbStyle, thumbStyle } from "../_components/thumb";
 
@@ -11,7 +16,7 @@ export const metadata = { title: "Series & Sets // Vinylmation Vault" };
  * as 319 identical text cards. Renders a fixed three slots regardless of how
  * many photos exist, so card heights stay uniform across the grid.
  */
-function SeriesThumbStrip({ images }: { images: string[] }) {
+function SeriesThumbStrip({ images }: { images: SeriesThumb[] }) {
   if (images.length === 0) return null;
 
   return (
@@ -24,7 +29,7 @@ function SeriesThumbStrip({ images }: { images: string[] }) {
           <div
             key={i}
             className="flex-1 transition-transform duration-300 group-hover:scale-[1.03]"
-            style={src ? thumbStyle(src) : emptyThumbStyle()}
+            style={src ? thumbStyle(src.path, src.aspect) : emptyThumbStyle()}
           />
         );
       })}

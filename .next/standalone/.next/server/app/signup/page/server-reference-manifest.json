@@ -1,0 +1,29 @@
+{
+  "node": {
+    "60d966003722f2d9e73a180481d169c644643475b2": {
+      "workers": {
+        "app/signup/page": {
+          "moduleId": 80793,
+          "async": false,
+          "exportedName": "signIn",
+          "filename": "app/_actions/auth.ts"
+        }
+      },
+      "exportedName": "signIn",
+      "filename": "app/_actions/auth.ts"
+    },
+    "604175991ac5dcc81ab02c184e51fdefd930d38f4b": {
+      "workers": {
+        "app/signup/page": {
+          "moduleId": 80793,
+          "async": false,
+          "exportedName": "signUp",
+          "filename": "app/_actions/auth.ts"
+        }
+      },
+      "exportedName": "signUp",
+      "filename": "app/_actions/auth.ts"
+    }
+  },
+  "edge": {}
+}

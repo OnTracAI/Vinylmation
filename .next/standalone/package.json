@@ -1,0 +1,36 @@
+{
+  "name": "vinylmation-tracker",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "scrape:series": "node scripts/scrape-series.mjs",
+    "scrape:figures": "node scripts/scrape-figures.mjs",
+    "seed": "node scripts/seed.mjs",
+    "scrape:images": "node scripts/scrape-figures.mjs --images",
+    "link:images": "node scripts/link-images.mjs",
+    "test": "node scripts/smoke-test.mjs && node --experimental-strip-types scripts/query-test.mts",
+    "db:push": "drizzle-kit push"
+  },
+  "dependencies": {
+    "better-sqlite3": "^13.0.2",
+    "drizzle-orm": "^0.45.2",
+    "jose": "^6.2.8",
+    "next": "^16.2.12",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.3",
+    "@types/better-sqlite3": "^9.6.0",
+    "@types/node": "^26.1.2",
+    "@types/react": "^19.2.18",
+    "drizzle-kit": "^0.31.10",
+    "postcss": "^8.5.25",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^7.0.2"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "node": {
+    "401f0b8a20fd82ac3663b2a17638903f82ecb052db": {
+      "workers": {
+        "app/search/page": {
+          "moduleId": 12869,
+          "async": false,
+          "exportedName": "toggleOwned",
+          "filename": "app/_actions/collection.ts"
+        }
+      },
+      "exportedName": "toggleOwned",
+      "filename": "app/_actions/collection.ts"
+    },
+    "403dda396e34a778a69bbdb3e4310baf900fce457e": {
+      "workers": {
+        "app/search/page": {
+          "moduleId": 12869,
+          "async": false,
+          "exportedName": "toggleWishlist",
+          "filename": "app/_actions/collection.ts"
+        }
+      },
+      "exportedName": "toggleWishlist",
+      "filename": "app/_actions/collection.ts"
+    }
+  },
+  "edge": {}
+}

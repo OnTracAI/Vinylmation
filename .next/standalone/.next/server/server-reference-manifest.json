@@ -1,0 +1,186 @@
+{
+  "node": {
+    "401f0b8a20fd82ac3663b2a17638903f82ecb052db": {
+      "workers": {
+        "app/collection/page": {
+          "moduleId": 55433,
+          "async": false,
+          "exportedName": "toggleOwned",
+          "filename": "app/_actions/collection.ts"
+        },
+        "app/figure/[series]/[slug]/page": {
+          "moduleId": 73072,
+          "async": false,
+          "exportedName": "toggleOwned",
+          "filename": "app/_actions/collection.ts"
+        },
+        "app/page": {
+          "moduleId": 36002,
+          "async": false,
+          "exportedName": "toggleOwned",
+          "filename": "app/_actions/collection.ts"
+        },
+        "app/search/page": {
+          "moduleId": 12869,
+          "async": false,
+          "exportedName": "toggleOwned",
+          "filename": "app/_actions/collection.ts"
+        },
+        "app/series/[slug]/page": {
+          "moduleId": 57032,
+          "async": false,
+          "exportedName": "toggleOwned",
+          "filename": "app/_actions/collection.ts"
+        }
+      },
+      "filename": "app/_actions/collection.ts",
+      "exportedName": "toggleOwned"
+    },
+    "403dda396e34a778a69bbdb3e4310baf900fce457e": {
+      "workers": {
+        "app/collection/page": {
+          "moduleId": 55433,
+          "async": false,
+          "exportedName": "toggleWishlist",
+          "filename": "app/_actions/collection.ts"
+        },
+        "app/figure/[series]/[slug]/page": {
+          "moduleId": 73072,
+          "async": false,
+          "exportedName": "toggleWishlist",
+          "filename": "app/_actions/collection.ts"
+        },
+        "app/page": {
+          "moduleId": 36002,
+          "async": false,
+          "exportedName": "toggleWishlist",
+          "filename": "app/_actions/collection.ts"
+        },
+        "app/search/page": {
+          "moduleId": 12869,
+          "async": false,
+          "exportedName": "toggleWishlist",
+          "filename": "app/_actions/collection.ts"
+        },
+        "app/series/[slug]/page": {
+          "moduleId": 57032,
+          "async": false,
+          "exportedName": "toggleWishlist",
+          "filename": "app/_actions/collection.ts"
+        }
+      },
+      "filename": "app/_actions/collection.ts",
+      "exportedName": "toggleWishlist"
+    },
+    "0062da720646e5fea5a6ec79d4e8e663c6455e9d9e": {
+      "workers": {
+        "app/collection/page": {
+          "moduleId": 55433,
+          "async": false,
+          "exportedName": "signOut",
+          "filename": "app/_actions/auth.ts"
+        }
+      },
+      "filename": "app/_actions/auth.ts",
+      "exportedName": "signOut"
+    },
+    "604175991ac5dcc81ab02c184e51fdefd930d38f4b": {
+      "workers": {
+        "app/collection/page": {
+          "moduleId": 55433,
+          "async": false,
+          "exportedName": "signUp",
+          "filename": "app/_actions/auth.ts"
+        },
+        "app/login/page": {
+          "moduleId": 49714,
+          "async": false,
+          "exportedName": "signUp",
+          "filename": "app/_actions/auth.ts"
+        },
+        "app/signup/page": {
+          "moduleId": 80793,
+          "async": false,
+          "exportedName": "signUp",
+          "filename": "app/_actions/auth.ts"
+        }
+      },
+      "filename": "app/_actions/auth.ts",
+      "exportedName": "signUp"
+    },
+    "60d966003722f2d9e73a180481d169c644643475b2": {
+      "workers": {
+        "app/collection/page": {
+          "moduleId": 55433,
+          "async": false,
+          "exportedName": "signIn",
+          "filename": "app/_actions/auth.ts"
+        },
+        "app/login/page": {
+          "moduleId": 49714,
+          "async": false,
+          "exportedName": "signIn",
+          "filename": "app/_actions/auth.ts"
+        },
+        "app/signup/page": {
+          "moduleId": 80793,
+          "async": false,
+          "exportedName": "signIn",
+          "filename": "app/_actions/auth.ts"
+        }
+      },
+      "filename": "app/_actions/auth.ts",
+      "exportedName": "signIn"
+    },
+    "60bf46e17211044f145bc58c40a23424c27fcdeaf4": {
+      "workers": {
+        "app/figure/[series]/[slug]/page": {
+          "moduleId": 73072,
+          "async": false,
+          "exportedName": "setQuantity",
+          "filename": "app/_actions/collection.ts"
+        }
+      },
+      "filename": "app/_actions/collection.ts",
+      "exportedName": "setQuantity"
+    },
+    "6027e072444f86bb8dcb58298d9c2a572db58c8457": {
+      "workers": {
+        "app/figure/[series]/[slug]/page": {
+          "moduleId": 73072,
+          "async": false,
+          "exportedName": "updateOwnedDetails",
+          "filename": "app/_actions/collection.ts"
+        }
+      },
+      "filename": "app/_actions/collection.ts",
+      "exportedName": "updateOwnedDetails"
+    },
+    "406de7580260129f4e37e851118679bc1b853bc608": {
+      "workers": {
+        "app/series/[slug]/page": {
+          "moduleId": 57032,
+          "async": false,
+          "exportedName": "ownEntireSeries",
+          "filename": "app/_actions/collection.ts"
+        }
+      },
+      "filename": "app/_actions/collection.ts",
+      "exportedName": "ownEntireSeries"
+    },
+    "40f78b04c1e134cbb4003fdd83e7363739bea08cdd": {
+      "workers": {
+        "app/series/[slug]/page": {
+          "moduleId": 57032,
+          "async": false,
+          "exportedName": "wantEntireSeries",
+          "filename": "app/_actions/collection.ts"
+        }
+      },
+      "filename": "app/_actions/collection.ts",
+      "exportedName": "wantEntireSeries"
+    }
+  },
+  "edge": {},
+  "encryptionKey": "EMr89zORJBJA34Zt0Hv8TxvCyA7QIOqlIhSA3xYG+as="
+}

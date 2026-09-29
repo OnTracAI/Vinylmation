@@ -500,6 +500,8 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 var __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$_components$2f$OwnershipButtons$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/app/_components/OwnershipButtons.tsx [app-rsc] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$_components$2f$RarityTag$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/app/_components/RarityTag.tsx [app-rsc] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$_components$2f$thumb$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/app/_components/thumb.ts [app-rsc] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$_components$2f$VinylSilhouette$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/app/_components/VinylSilhouette.tsx [app-rsc] (ecmascript)");
+;
 ;
 ;
 ;
@@ -524,7 +526,7 @@ function FigureCard({ figure, signedIn, index = 0 }) {
                 }
             }, void 0, false, {
                 fileName: "[project]/app/_components/FigureCard.tsx",
-                lineNumber: 29,
+                lineNumber: 30,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
@@ -535,7 +537,7 @@ function FigureCard({ figure, signedIn, index = 0 }) {
                         figure: figure
                     }, void 0, false, {
                         fileName: "[project]/app/_components/FigureCard.tsx",
-                        lineNumber: 39,
+                        lineNumber: 40,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -545,7 +547,7 @@ function FigureCard({ figure, signedIn, index = 0 }) {
                                 type: figure.type
                             }, void 0, false, {
                                 fileName: "[project]/app/_components/FigureCard.tsx",
-                                lineNumber: 42,
+                                lineNumber: 43,
                                 columnNumber: 11
                             }, this),
                             owned && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -559,13 +561,13 @@ function FigureCard({ figure, signedIn, index = 0 }) {
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/_components/FigureCard.tsx",
-                                lineNumber: 44,
+                                lineNumber: 45,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/_components/FigureCard.tsx",
-                        lineNumber: 41,
+                        lineNumber: 42,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -573,7 +575,7 @@ function FigureCard({ figure, signedIn, index = 0 }) {
                         children: figure.name
                     }, void 0, false, {
                         fileName: "[project]/app/_components/FigureCard.tsx",
-                        lineNumber: 50,
+                        lineNumber: 51,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -582,7 +584,7 @@ function FigureCard({ figure, signedIn, index = 0 }) {
                         children: figure.seriesName
                     }, void 0, false, {
                         fileName: "[project]/app/_components/FigureCard.tsx",
-                        lineNumber: 57,
+                        lineNumber: 58,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -597,7 +599,7 @@ function FigureCard({ figure, signedIn, index = 0 }) {
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/_components/FigureCard.tsx",
-                                lineNumber: 63,
+                                lineNumber: 64,
                                 columnNumber: 13
                             }, this) : null,
                             figure.rarity && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -605,7 +607,7 @@ function FigureCard({ figure, signedIn, index = 0 }) {
                                 children: figure.rarity
                             }, void 0, false, {
                                 fileName: "[project]/app/_components/FigureCard.tsx",
-                                lineNumber: 67,
+                                lineNumber: 68,
                                 columnNumber: 29
                             }, this),
                             figure.size && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -613,19 +615,19 @@ function FigureCard({ figure, signedIn, index = 0 }) {
                                 children: figure.size
                             }, void 0, false, {
                                 fileName: "[project]/app/_components/FigureCard.tsx",
-                                lineNumber: 68,
+                                lineNumber: 69,
                                 columnNumber: 27
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/_components/FigureCard.tsx",
-                        lineNumber: 61,
+                        lineNumber: 62,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/_components/FigureCard.tsx",
-                lineNumber: 38,
+                lineNumber: 39,
                 columnNumber: 7
             }, this),
             signedIn && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -637,18 +639,18 @@ function FigureCard({ figure, signedIn, index = 0 }) {
                     compact: true
                 }, void 0, false, {
                     fileName: "[project]/app/_components/FigureCard.tsx",
-                    lineNumber: 74,
+                    lineNumber: 75,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/_components/FigureCard.tsx",
-                lineNumber: 73,
+                lineNumber: 74,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/app/_components/FigureCard.tsx",
-        lineNumber: 24,
+        lineNumber: 25,
         columnNumber: 5
     }, this);
 }
@@ -675,126 +677,23 @@ function FigureCard({ figure, signedIn, index = 0 }) {
             style: (0, __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$_components$2f$thumb$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["thumbStyle"])(figure.imagePath)
         }, void 0, false, {
             fileName: "[project]/app/_components/FigureCard.tsx",
-            lineNumber: 104,
+            lineNumber: 105,
             columnNumber: 7
         }, this);
     }
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "relative flex items-center justify-center overflow-hidden",
         style: __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$_components$2f$thumb$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["THUMB_BOX"],
-        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(VinylSilhouette, {
+        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$_components$2f$VinylSilhouette$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["VinylSilhouette"], {
             color: (0, __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$_components$2f$RarityTag$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["rarityColor"])(figure.type)
         }, void 0, false, {
             fileName: "[project]/app/_components/FigureCard.tsx",
-            lineNumber: 119,
+            lineNumber: 120,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/app/_components/FigureCard.tsx",
-        lineNumber: 115,
-        columnNumber: 5
-    }, this);
-}
-/** The Vinylmation body shape: mouse-ear head over a rounded torso. */ function VinylSilhouette({ color }) {
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
-        viewBox: "0 0 100 100",
-        className: "size-[62%] transition-transform duration-500 group-hover:scale-105",
-        "aria-hidden": true,
-        children: [
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("g", {
-                fill: color,
-                opacity: "0.17",
-                children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("circle", {
-                        cx: "27",
-                        cy: "26",
-                        r: "14"
-                    }, void 0, false, {
-                        fileName: "[project]/app/_components/FigureCard.tsx",
-                        lineNumber: 133,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("circle", {
-                        cx: "73",
-                        cy: "26",
-                        r: "14"
-                    }, void 0, false, {
-                        fileName: "[project]/app/_components/FigureCard.tsx",
-                        lineNumber: 134,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("circle", {
-                        cx: "50",
-                        cy: "42",
-                        r: "23"
-                    }, void 0, false, {
-                        fileName: "[project]/app/_components/FigureCard.tsx",
-                        lineNumber: 135,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
-                        d: "M31 60h38a8 8 0 0 1 8 8v18a8 8 0 0 1-8 8H31a8 8 0 0 1-8-8V68a8 8 0 0 1 8-8Z"
-                    }, void 0, false, {
-                        fileName: "[project]/app/_components/FigureCard.tsx",
-                        lineNumber: 136,
-                        columnNumber: 9
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "[project]/app/_components/FigureCard.tsx",
-                lineNumber: 132,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("g", {
-                fill: "none",
-                stroke: color,
-                strokeWidth: "1.5",
-                opacity: "0.5",
-                children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("circle", {
-                        cx: "27",
-                        cy: "26",
-                        r: "14"
-                    }, void 0, false, {
-                        fileName: "[project]/app/_components/FigureCard.tsx",
-                        lineNumber: 139,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("circle", {
-                        cx: "73",
-                        cy: "26",
-                        r: "14"
-                    }, void 0, false, {
-                        fileName: "[project]/app/_components/FigureCard.tsx",
-                        lineNumber: 140,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("circle", {
-                        cx: "50",
-                        cy: "42",
-                        r: "23"
-                    }, void 0, false, {
-                        fileName: "[project]/app/_components/FigureCard.tsx",
-                        lineNumber: 141,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
-                        d: "M31 60h38a8 8 0 0 1 8 8v18a8 8 0 0 1-8 8H31a8 8 0 0 1-8-8V68a8 8 0 0 1 8-8Z"
-                    }, void 0, false, {
-                        fileName: "[project]/app/_components/FigureCard.tsx",
-                        lineNumber: 142,
-                        columnNumber: 9
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "[project]/app/_components/FigureCard.tsx",
-                lineNumber: 138,
-                columnNumber: 7
-            }, this)
-        ]
-    }, void 0, true, {
-        fileName: "[project]/app/_components/FigureCard.tsx",
-        lineNumber: 127,
+        lineNumber: 116,
         columnNumber: 5
     }, this);
 }

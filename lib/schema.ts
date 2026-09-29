@@ -68,6 +68,12 @@ export const figures = sqliteTable(
     imageUrl: text("image_url"),
     /** Local path under /public if the operator opted into image download. */
     imagePath: text("image_path"),
+    /**
+     * The image's own width/height, recorded by link-images.mjs. Drives
+     * thumbnail framing: wide values are multi-view composites that need
+     * cropping, everything else is a single figure that should be fitted whole.
+     */
+    imageAspect: real("image_aspect"),
 
     /** True when the figure detail page was archived and fully parsed. */
     detailComplete: integer("detail_complete", { mode: "boolean" })

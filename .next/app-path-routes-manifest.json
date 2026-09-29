@@ -1,0 +1,12 @@
+{
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/collection/page": "/collection",
+  "/figure/[series]/[slug]/page": "/figure/[series]/[slug]",
+  "/login/page": "/login",
+  "/page": "/",
+  "/search/page": "/search",
+  "/series/[slug]/page": "/series/[slug]",
+  "/series/page": "/series",
+  "/signup/page": "/signup"
+}

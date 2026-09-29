@@ -1,0 +1,29 @@
+{
+  "node": {
+    "4095c879e987d867c575e967211447d854656d73a0": {
+      "workers": {
+        "app/search/page": {
+          "moduleId": "[project]/.next-internal/server/app/search/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/_actions/collection.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "toggleOwned",
+          "filename": "app/_actions/collection.ts"
+        }
+      },
+      "exportedName": "toggleOwned",
+      "filename": "app/_actions/collection.ts"
+    },
+    "401ec01aba2726aa4b162f14d0e3246571ce45cf17": {
+      "workers": {
+        "app/search/page": {
+          "moduleId": "[project]/.next-internal/server/app/search/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/_actions/collection.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "toggleWishlist",
+          "filename": "app/_actions/collection.ts"
+        }
+      },
+      "exportedName": "toggleWishlist",
+      "filename": "app/_actions/collection.ts"
+    }
+  },
+  "edge": {}
+}
